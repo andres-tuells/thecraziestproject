@@ -1,0 +1,23 @@
+{
+  "name": "thecraziestproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "cd www && gatsby build && rm -rf ../docs/* && cp -R public/* ../docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andres-tuells/thecraziestproject.git"
+  },
+  "keywords": [],
+  "author": "Andrés Tuells",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andres-tuells/thecraziestproject/issues"
+  },
+  "homepage": "https://github.com/andres-tuells/thecraziestproject#readme"
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[An extension of the gatsby starter blog, adding a home page with support for MDX]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 19 Apr 2020 13:41:16 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><link>https://gatsby-starter-mdx-website-blog.netlify.com/hi-folks/</link><guid isPermaLink="false">https://gatsby-starter-mdx-website-blog.netlify.com/hi-folks/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;New Beginnings&quot;,
+  &quot;date&quot;: &quot;2015-05-28T22:40:32.169Z&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Far far away, behind the word mountains, far from the countries Vokalia and\nConsonantia, there live the blind texts. Separated they live in Bookmarksgrove\nright at the coast of the Semantics, a large language ocean. A small river named\nDuden flows by their place and supplies it with the necessary regelialia.&quot;), mdx(&quot;h2&quot;, null, &quot;On deer horse aboard tritely yikes and much&quot;), mdx(&quot;p&quot;, null, &quot;The Big Oxmox advised her not to do so, because there were thousands of bad\nCommas, wild Question Marks and devious Semikoli, but the Little Blind Text\ndidn\u2019t listen. She packed her seven versalia, put her initial into the belt and\nmade herself on the way.&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;This however showed weasel&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Well uncritical so misled&quot;, mdx(&quot;ul&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;this is very interesting&quot;))), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Goodness much until that fluid owl&quot;)), mdx(&quot;p&quot;, null, &quot;When she reached the first hills of the &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Italic Mountains&quot;), &quot;, she had a last\nview back on the skyline of her hometown &quot;, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Bookmarksgrove&quot;), &quot;, the headline of\n&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;http://google.com&quot;
+  }), &quot;Alphabet Village&quot;), &quot; and the subline of her own road, the Line\nLane. Pityful a rethoric question ran over her cheek, then she continued her\nway. On her way she met a copy.&quot;), mdx(&quot;h3&quot;, null, &quot;Overlaid the jeepers uselessly much excluding&quot;), mdx(&quot;p&quot;, null, &quot;But nothing the copy said could convince her and so it didn\u2019t take long until a\nfew insidious Copy Writers ambushed her, made her drunk with\n&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;http://google.com&quot;
+  }), &quot;Longe and Parole&quot;), &quot; and dragged her into their agency, where\nthey abused her for their projects again and again. And if she hasn\u2019t been\nrewritten, then they are still using her.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;Far far away, behind the word mountains, far from the countries Vokalia and\nConsonantia, there live the blind texts. Separated they live in Bookmarksgrove\nright at the coast of the Semantics, a large language ocean.&quot;)), mdx(&quot;p&quot;, null, &quot;It is a paradisematic country, in which roasted parts of sentences fly into your\nmouth. Even the all-powerful Pointing has no control about the blind texts it is\nan almost unorthographic life One day however a small line of blind text by the\nname of Lorem Ipsum decided to leave for the far World of Grammar.&quot;), mdx(&quot;h3&quot;, null, &quot;According a funnily until pre-set or arrogant well cheerful&quot;), mdx(&quot;p&quot;, null, &quot;The Big Oxmox advised her not to do so, because there were thousands of bad\nCommas, wild Question Marks and devious Semikoli, but the Little Blind Text\ndidn\u2019t listen. She packed her seven versalia, put her initial into the belt and\nmade herself on the way.&quot;), mdx(&quot;ol&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;So baboon this&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;Mounted militant weasel gregariously admonishingly straightly hey&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;Dear foresaw hungry and much some overhung&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, &quot;Rash opossum less because less some amid besides yikes jeepers frenetic\nimpassive fruitlessly shut&quot;)), mdx(&quot;p&quot;, null, &quot;When she reached the first hills of the Italic Mountains, she had a last view\nback on the skyline of her hometown Bookmarksgrove, the headline of Alphabet\nVillage and the subline of her own road, the Line Lane. Pityful a rethoric\nquestion ran over her cheek, then she continued her way. On her way she met a\ncopy.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;The copy warned the Little Blind Text, that where it came from it would have\nbeen rewritten a thousand times and everything that was left from its origin\nwould be the word \u201Cand\u201D and the Little Blind Text should turn around and\nreturn to its own, safe country.&quot;)), mdx(&quot;p&quot;, null, &quot;But nothing the copy said could convince her and so it didn\u2019t take long until a\nfew insidious Copy Writers ambushed her, made her drunk with Longe and Parole\nand dragged her into their agency, where they abused her for their projects\nagain and again. And if she hasn\u2019t been rewritten, then they are still using\nher. Far far away, behind the word mountains, far from the countries Vokalia and\nConsonantia, there live the blind texts.&quot;), mdx(&quot;h4&quot;, null, &quot;Silent delightfully including because before one up barring chameleon&quot;), mdx(&quot;p&quot;, null, &quot;Separated they live in Bookmarksgrove right at the coast of the Semantics, a\nlarge language ocean. A small river named Duden flows by their place and\nsupplies it with the necessary regelialia. It is a paradisematic country, in\nwhich roasted parts of sentences fly into your mouth.&quot;), mdx(&quot;p&quot;, null, &quot;Even the all-powerful Pointing has no control about the blind texts it is an\nalmost unorthographic life One day however a small line of blind text by the\nname of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox\nadvised her not to do so, because there were thousands of bad Commas, wild\nQuestion Marks and devious Semikoli, but the Little Blind Text didn\u2019t listen.&quot;), mdx(&quot;h5&quot;, null, &quot;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&quot;), mdx(&quot;p&quot;, null, &quot;She packed her seven versalia, put her initial into the belt and made herself on\nthe way. When she reached the first hills of the Italic Mountains, she had a\nlast view back on the skyline of her hometown Bookmarksgrove, the headline of\nAlphabet Village and the subline of her own road, the Line Lane. Pityful a\nrethoric question ran over her cheek, then she continued her way. On her way she\nmet a copy.&quot;), mdx(&quot;h6&quot;, null, &quot;Slapped cozy a that lightheartedly and far&quot;), mdx(&quot;p&quot;, null, &quot;The copy warned the Little Blind Text, that where it came from it would have\nbeen rewritten a thousand times and everything that was left from its origin\nwould be the word \u201Cand\u201D and the Little Blind Text should turn around and return\nto its own, safe country. But nothing the copy said could convince her and so it\ndidn\u2019t take long until a few insidious Copy Writers ambushed her, made her drunk\nwith Longe and Parole and dragged her into their agency, where they abused her\nfor their projects again and again.&quot;), mdx(&quot;h4&quot;, null, &quot;Some highlighted code&quot;), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;gatsby-highlight&quot;,
+    &quot;data-language&quot;: &quot;js&quot;
+  }, mdx(&quot;pre&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;language-js&quot;
+  }), mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-js&quot;
+  }), mdx(&quot;span&quot;, _extends({
+    parentName: &quot;code&quot;
+  }, {
+    &quot;className&quot;: &quot;token keyword&quot;
+  }), &quot;const&quot;), &quot; some &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;code&quot;
+  }, {
+    &quot;className&quot;: &quot;token operator&quot;
+  }), &quot;=&quot;), &quot; &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;code&quot;
+  }, {
+    &quot;className&quot;: &quot;token punctuation&quot;
+  }), &quot;{&quot;), mdx(&quot;span&quot;, _extends({
+    parentName: &quot;code&quot;
+  }, {
+    &quot;className&quot;: &quot;token punctuation&quot;
+  }), &quot;}&quot;)))));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><link>https://gatsby-starter-mdx-website-blog.netlify.com/my-second-post/</link><guid isPermaLink="false">https://gatsby-starter-mdx-website-blog.netlify.com/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;My Second Post!&quot;,
+  &quot;date&quot;: &quot;2015-05-06T23:46:37.121Z&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Wow! I love blogging so much already.&quot;), mdx(&quot;p&quot;, null, &quot;Did you know that \u201Cdespite its name, salted duck eggs can also be made from\nchicken eggs, though the taste and texture will be somewhat different, and the\negg yolk will be less rich.\u201D?\n(&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;
+  }), &quot;Wikipedia Link&quot;), &quot;)&quot;), mdx(&quot;p&quot;, null, &quot;Yeah, I didn\u2019t either.&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Hello World]]></title><link>https://gatsby-starter-mdx-website-blog.netlify.com/hello-world/</link><guid isPermaLink="false">https://gatsby-starter-mdx-website-blog.netlify.com/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Hello World&quot;,
+  &quot;date&quot;: &quot;2015-05-01T22:12:03.284Z&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;This is my first post on my new fake blog! How exciting!&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019m sure I\u2019ll write a lot more interesting things in the future.&quot;), mdx(&quot;p&quot;, null, &quot;Oh, and here\u2019s a great quote from this Wikipedia on\n&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;
+  }), &quot;salted duck eggs&quot;), &quot;.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;A salted duck egg is a Chinese preserved food product made by soaking duck\neggs in brine, or packing each egg in damp, salted charcoal. In Asian\nsupermarkets, these eggs are sometimes sold covered in a thick layer of salted\ncharcoal paste. The eggs may also be sold with the salted paste removed,\nwrapped in plastic, and vacuum packed. From the salt curing process, the\nsalted duck eggs have a briny aroma, a gelatin-like egg white and a\nfirm-textured, round yolk that is bright orange-red in color.&quot;)), mdx(&quot;p&quot;, null, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;1280px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-link&quot;,
+    &quot;href&quot;: &quot;/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg&quot;,
+    &quot;style&quot;: {
+      &quot;display&quot;: &quot;block&quot;
+    },
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: [&quot;noopener&quot;]
+  }), &quot;\n    &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;a&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;75%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACEhEy/9oACAEBAAEFAkqW2DlnRj73yf/EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQL/2gAIAQIBAT8Bi6f/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAbEAADAQADAQAAAAAAAAAAAAABESEAMUGBof/aAAgBAQABPyGxNMfrLHmCDZmAzzvJJDjEQCHv/9oADAMBAAIAAwAAABDIL//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxARhylZv//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EFoktI//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAxIWFBcYHh/9oACAEBAAE/EEbMLQ0fMHDVaPIXyI4pk4JUnWacNCtO8ojDE9TGIYES7/Jn/9k=&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;a&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;alt&quot;: &quot;Chinese Salty Egg&quot;,
+    &quot;title&quot;: &quot;Chinese Salty Egg&quot;,
+    &quot;src&quot;: &quot;/static/8058f3f26913fea3b6a89a73344fe94a/6c315/salty_egg.jpg&quot;,
+    &quot;srcSet&quot;: [&quot;/static/8058f3f26913fea3b6a89a73344fe94a/f562b/salty_egg.jpg 320w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/e2288/salty_egg.jpg 640w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/6c315/salty_egg.jpg 1280w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/fb329/salty_egg.jpg 1920w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg 2048w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1280px) 100vw, 1280px&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;
+  })), &quot;\n  &quot;), &quot;\n    &quot;)));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item></channel></rss>
