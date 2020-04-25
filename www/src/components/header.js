@@ -55,7 +55,7 @@ const Header1 = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={activeLinkStyle}>
-            Gatsby MDX Starter
+            The Craziest Project
             </Link>
           </li>
           <li>
