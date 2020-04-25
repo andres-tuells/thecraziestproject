@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "cd www && gatsby build && rm -rf ../docs/* && cp -R public/* ../docs/"
+    "build": "cd www && gatsby build && rm -rf ../docs/* && cp -R public/* ../docs/ && cp ../CNAME ../docs/"
   },
   "repository": {
     "type": "git",
