@@ -1,149 +1,91 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby MDX Starter`,
-    author: `Doak Heggeness`,
-    description: `An extension of the gatsby starter blog, adding a home page with support for MDX`,
-    siteUrl: `https://gatsby-starter-mdx-website-blog.netlify.com/`,
-    social: {
-      twitter: `doakheggeness`,
-    },
+    title: 'Gatsby Casper',
+    description: 'A port of the casper blog built for gatsby',
+    siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
+  },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-sharp',
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        quality: 100,
+        stripMetadata: true,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: 'content',
+        path: path.join(__dirname, '..', 'content'),
       },
     },
     {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      path: `${__dirname}/src/images`,
-      name: `images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        extensions: ['.mdx', '.md'],
-        defaultLayouts: require.resolve('./src/components/layout.js'),
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              maxWidth: 1280,
+              wrapperStyle: 'margin-bottom: 1rem',
             },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-abbr',
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-images',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              maxWidth: 2000,
+              quality: 100,
             },
-          },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-          },
-
-          {
-            resolve: `gatsby-remark-smartypants`,
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-          },
-        ],
-        plugins: [ `gatsby-remark-images`],
-      },
-    },
-    `gatsby-plugin-emotion`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  data: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.body }],
-                })
-              })
-            },
-
-            /* if you want to filter for only published posts, you can do
-             * something like this:
-             * filter: { frontmatter: { published: { ne: false } } }
-             * just make sure to add a published frontmatter field to all posts,
-             * otherwise gatsby will complain
-             **/
-            query: `
-            {
-              allMdx(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
-              ) {
-                edges {
-                  node {
-                    fields { slug }
-                    frontmatter {
-                      title
-                      date
-                    }
-                    body
-                  }
-                }
-              }
-            }
-            `,
-            output: '/rss.xml',
-            title: 'Gatsby RSS feed',
           },
         ],
       },
     },
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        name: `Gatsby Starter Mdx Website & Blog`,
-        short_name: `Gatsby MDX`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        siteUrl: 'https://gatsby-casper.netlify.com',
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-typescript',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-yaml',
+    'gatsby-plugin-feed',
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-XXXX-Y',
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // IP anonymization for GDPR compliance
+        anonymize: true,
+        // Disable analytics for users with `Do Not Track` enabled
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/preview/**'],
+        // Specifies what percentage of users should be tracked
+        sampleRate: 100,
+        // Determines how often site speed tracking beacons will be sent
+        siteSpeedSampleRate: 10,
+      },
+    },
   ],
-}
+};

@@ -1,52 +1,89 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby MDX Website & Blog starter
-</h1>
+# gatsby-casper
 
-Kick off your project with this website & blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React, with support for an MDX website & blog incorporating the CSS-in-JS library Emotion.
+Demo: https://gatsby-casper.netlify.app
 
-_Have another more specific idea? You may want to check out this awesome collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+This is a static blog generator and starter gatsby repo. A port of [Casper](https://github.com/TryGhost/Casper) v3 a theme from [Ghost](https://ghost.org/) for [GatsbyJS](https://www.gatsbyjs.org/) using [TypeScript](https://www.typescriptlang.org/).
 
-What's MDX you ask? MDX let's you use JSX in your Markdown, making it even
-easier to write blog posts, document your React components, and much more. [Find
-out more about MDX](https://github.com/mdx-js/mdx), and [gatsby-mdx](https://github.com/ChristopherBiscardi/gatsby-mdx), the plugin that makes
-this blog possible!
+## Getting Started
 
-## 🚀 Quick start
+Clone this repo.
 
-1.  **Create a Gatsby site.**
+```
+git clone https://github.com/scttcper/gatsby-casper.git --depth=1
+```
 
-    Use the Gatsby CLI to create a new site, specifying the wensite & blog starter.
+Remove .git folder and setup a new one
 
-    ```sh
-    # create a new Gatsby site using the blog starter
-    npx gatsby new my-website-blog-starter https://github.com/doakheggeness/gatsby-starter-mdx-website-blog
-    ```
+```
+rm -rf .git && git init
+```
 
-1.  **Start developing.**
+Edit website-config.ts with your website settings.
+Either disable subscribe or setup a mailchimp list and add the form action and hidden field input name.
 
-    Navigate into your new site’s directory and start it up.
+Now push to whatever repo you want!
 
-    ```sh
-    cd my-website-blog-starter/
-    gatsby develop
-    ```
+### Progress
 
-1.  **Open the source code and start editing!**
+- [x] emotion / component styles
+- [x] home page
+- [x] tag page
+- [x] author page
+- [x] blog page
+  - [x] subscribe form - using [mailchimp](https://mailchimp.com)
+  - [ ] full width images in markdown? - not sure if possible
+  - [x] multiple post authors
+- [x] 404 page
+- [x] subscribe modal/overlay
+- [x] rss feed (on production build)
+- [ ] polish ✨
+  - [x] meta tags
+  - [x] page titles
+  - [ ] pagination
 
-    Your site is now running at `http://localhost:8000`!
+### Deploy to Netlify
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/scttcper/gatsby-casper)
 
-    Open the `my-website-blog-starter` directory in your code editor of choice and edit `src/pages/index.mdx`. Save your changes and the browser will update in real time!
+## How to configure Google Analytics
 
-## 💫 Deploy
+Edit `gatsby-config.js` and add your tracking ID
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/doakheggeness/gatsby-starter-mdx-website-blog)
+```javascript
+{
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      // Here goes your tracking ID
+      trackingId: 'UA-XXXX-Y',
+      // Puts tracking script in the head instead of the body
+      head: true,
+      // IP anonymization for GDPR compliance
+      anonymize: true,
+      // Disable analytics for users with `Do Not Track` enabled
+      respectDNT: true,
+      // Avoids sending pageview hits from custom paths
+      exclude: ['/preview/**'],
+      // Specifies what percentage of users should be tracked
+      sampleRate: 100,
+      // Determines how often site speed tracking beacons will be sent
+      siteSpeedSampleRate: 10,
+    },
+},
+```
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+## How to edit your site title and description
+
+Edit `gatsby-config.js` section `siteMetadata`
+
+```javascript
+ siteMetadata: {
+    title: 'My awesome site name',
+    description: 'This is a description for my site',
+    siteUrl: 'https://mysite.com', // full path to blog - no ending slash
+  },
+```
+
+## How to adjust pagination
+
+In `gatsby-node.js`, edit the `postsPerPage` constant. The default value is
+six posts per page.
